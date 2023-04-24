@@ -1,0 +1,6 @@
+.dockerrc
+.DS_Store
+drupal/sites/default/files/*
+!drupal/sites/default/files/config_*
+drupal/modules/contrib
+.env

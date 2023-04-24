@@ -1,0 +1,33 @@
+version: "3"
+services:
+  drupal:
+    platform: linux/x86_64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "8080:80"
+    volumes:
+      - ./drupal/modules:/var/www/html/modules
+      - ./drupal/profiles:/var/www/html/profiles
+      - ./drupal/themes:/var/www/html/themes
+      - ./drupal/sites:/var/www/html/sites
+      - ./sync_scripts:/opt/drupal/sync_scripts
+      - ./composer.json:/opt/drupal/composer.json
+    environment:
+      DRUPAL_DATABASE_HOST: db
+      DRUPAL_DATABASE_NAME: ${DRUPAL_DATABASE_NAME}
+      DRUPAL_DATABASE_USER: ${DRUPAL_DATABASE_USER}
+      DRUPAL_DATABASE_PASSWORD: ${DRUPAL_DATABASE_PASSWORD}
+      ALGOLIA_APP_ID: ${ALGOLIA_APP_ID}
+      ALGOLIA_API_KEY: ${ALGOLIA_API_KEY}
+      DRUPAL_USER_NAME: ${DRUPAL_USER_NAME}
+      DRUPAL_USER_PASSWORD: ${DRUPAL_USER_PASSWORD}
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: ${DRUPAL_DATABASE_NAME}
+      MYSQL_ROOT_PASSWORD: ${DRUPAL_DATABASE_PASSWORD}
