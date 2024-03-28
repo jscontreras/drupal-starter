@@ -1,4 +1,4 @@
-# Drupal Algolia Demo
+# Drupal Demo
 Spinning a local drupal instance to test the Algolia Drupal module integration.
 
 `localhost:8080`
@@ -31,10 +31,6 @@ docker-compose exec drupal /opt/drupal/sync_scripts/install.sh
 docker-compose exec drupal /opt/drupal/sync_scripts/export.sh
 # Import
 docker-compose exec drupal /opt/drupal/sync_scripts/import.sh
-# Enable algolia
-docker-compose exec drupal drush pm:uninstall search_api -y
-docker-compose exec drupal drush pm:install search_api -y
-#
 ```
 Your default username `admin` and `admin123` password.
 ## Executing Queues
