@@ -18,8 +18,8 @@ drush config:import --source=$SHARED_FOLDER/config -y
 drush cr
 
 # Load the Algolia API_KEY
-drush config-set "search_api.server.algolia" "backend_config.application_id" $ALGOLIA_APP_ID -y
-drush config-set "search_api.server.algolia" "backend_config.api_key" $ALGOLIA_API_KEY -y
+# drush config-set "search_api.server.algolia" "backend_config.application_id" $ALGOLIA_APP_ID -y
+# drush config-set "search_api.server.algolia" "backend_config.api_key" $ALGOLIA_API_KEY -y
 drush cr
 
 

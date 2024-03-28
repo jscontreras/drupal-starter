@@ -1,4 +1,4 @@
-label: 'Término de la taxonomía'
+label: 'Término de taxonomía'
 description: 'Contenido perteneciente a un determinado término de taxonomía.'
 display:
   default:
@@ -7,6 +7,7 @@ display:
       pager:
         options:
           tags:
+            next: ››
             previous: ‹‹
           expose:
             items_per_page_label: 'Elementos por página'

@@ -16,8 +16,25 @@ docker-compose exec drupal /opt/drupal/sync_scripts/install.sh
 ```
 ### 3. Load the Algolia configuration (DEMO)
 If you want to load the Algolia demo (config and db), run the following command. This script will load your secret API admin key to your Drupal instance.
+If it fails, start from step 2 and run the export command.
+
 ```sh
-docker-compose exec drupal /opt/drupal/sync_scripts/imports.sh
+docker-compose exec drupal /opt/drupal/sync_scripts/import.sh
+```
+#### If it fails go this way
+```sh
+# Delete db
+docker-compose exec drupal drush sql:drop -y
+# Reinstall
+docker-compose exec drupal /opt/drupal/sync_scripts/install.sh
+# Export
+docker-compose exec drupal /opt/drupal/sync_scripts/export.sh
+# Import
+docker-compose exec drupal /opt/drupal/sync_scripts/import.sh
+# Enable algolia
+docker-compose exec drupal drush pm:uninstall search_api -y
+docker-compose exec drupal drush pm:install search_api -y
+#
 ```
 Your default username `admin` and `admin123` password.
 ## Executing Queues

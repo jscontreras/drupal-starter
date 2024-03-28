@@ -1,4 +1,4 @@
-uuid: 38565a57-548b-4847-8e25-f4de74776511
+uuid: 6b0b7bb7-74ee-4e23-9f80-6ec66a4c3a7c
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: p2ddT_dTKgmwxfntWt4VEsSEN8ZWQI5pKsIlb4byZ0A
+  default_config_hash: E2LWEMtG9KZMqn1qRWd-f-cZrOAHzAu5C9AidF7CLGY
 id: block_content.disclaimer_block.field_copyright
 field_name: field_copyright
 entity_type: block_content
@@ -19,5 +19,6 @@ required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats: {  }
 field_type: text_long

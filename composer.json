@@ -19,8 +19,7 @@
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
-        "drupal/quick_node_clone": "^1.16",
-        "drupal/search_api_algolia": "^3.0@beta"
+        "drupal/quick_node_clone": "^1.16"
     },
     "conflict": {
         "drupal/drupal": "*"

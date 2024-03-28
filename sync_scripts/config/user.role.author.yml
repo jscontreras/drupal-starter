@@ -1,4 +1,4 @@
-uuid: 444b64d5-561d-4a18-8492-fecf6f6c2bff
+uuid: 248209e9-b366-4433-a9a2-e3847ebb148b
 langcode: en
 status: true
 dependencies:
@@ -23,7 +23,7 @@ dependencies:
     - taxonomy
     - toolbar
 _core:
-  default_config_hash: gLQYbB2qVaGrsSc6O0_dyCW87mktF1SLMoTVuiayBP4
+  default_config_hash: 0vhO_07tJzAJlfixEyshv-AbpRto3wdMJHkgK5CjBEY
 id: author
 label: Author
 weight: 3
@@ -47,6 +47,7 @@ permissions:
   - 'create url aliases'
   - 'delete article revisions'
   - 'delete own article content'
+  - 'delete own files'
   - 'delete own page content'
   - 'delete own recipe content'
   - 'delete page revisions'

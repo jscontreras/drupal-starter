@@ -1,4 +1,4 @@
-uuid: 9960cfe6-8c23-446a-8cb7-283c30dc0744
+uuid: 50be5b5e-6cba-4315-956b-30253f2607d0
 langcode: en
 status: true
 dependencies:
@@ -15,7 +15,7 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: 1yu3w7Ms2aBtYqpl-scXUahZyeGAdqs3gBehi0uVspo
+  default_config_hash: qYIKdcnxlg6fpx9TuNNDq-qcpDpgXLbff6Fg-ObcKSw
 id: media.image.square
 targetEntityType: media
 bundle: image
@@ -27,6 +27,8 @@ content:
     settings:
       responsive_image_style: square
       image_link: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 1
     region: content
