@@ -56,3 +56,9 @@ To perform a full indexation via drush run:
 ```sh
 docker-compose exec drupal drush search-api:index
 ```
+
+## Useful commands
+```sh
+# Getting into drupal bash
+docker-compose exec drupal /bin/bash -it
+```
